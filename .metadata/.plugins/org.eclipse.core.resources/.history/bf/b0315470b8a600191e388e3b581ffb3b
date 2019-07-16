@@ -1,0 +1,27 @@
+package com.visa.training.Java;
+
+abstract class Account
+{
+	public String getAccountNo()
+	{
+		return "100";
+	}
+}
+
+class Saving extends Account
+{
+	public double getBalance()
+	{
+		return 0.0;
+	}
+}
+
+public class Test
+{
+	public static void main(String[] args) {
+		Account a = new Saving();
+		//System.out.println(a.getBalance());
+		int i[]=new int[5];
+		int x=i[5];
+	}
+}

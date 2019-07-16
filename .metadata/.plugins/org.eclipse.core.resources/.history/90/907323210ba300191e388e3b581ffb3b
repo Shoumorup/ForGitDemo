@@ -1,0 +1,13 @@
+import java.util.LinkedList;
+import java.util.Random;
+
+public class ListCircle {
+	LinkedList<Circle> l=new LinkedList<Circle>();
+	
+	Random r=new Random();
+	double x=r.nextDouble();
+	while(x>=0.01)
+	{
+		l.add(new Circle(x));
+	}
+}

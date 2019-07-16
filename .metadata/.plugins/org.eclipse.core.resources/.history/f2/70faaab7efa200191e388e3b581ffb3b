@@ -1,0 +1,31 @@
+package com.Visa.training.stack;
+
+public class FixedArrayStack implements Stack{
+	Object arr[];
+	int top,size;
+	FixedArrayStack(int size)
+	{
+		this.size=size;
+		arr=new Object[this.size];
+		top=-1;
+	}
+	
+	public void push(Object o)
+	{
+		++top;
+		if(top==size) System.out.println("Stack Full");
+		else arr[top]=o;
+	}
+	
+	public Object pop()
+	{
+		if(top==-1) 
+		{
+			System.out.println("Stack Empty");
+			return null;
+		}
+		Object obj=arr[top];
+		top--;
+		return obj;
+	}
+}

@@ -1,0 +1,11 @@
+package com.visa.training.jdbc;
+
+import java.sql.Connection;
+
+public class ConnectionTest {
+	public static void main(String[] args) {
+		Connection c = JdbcUtil.getConnection();
+		DatabaseMetaData metaData = c.getMetaData();
+	}
+
+}

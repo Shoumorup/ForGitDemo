@@ -1,0 +1,30 @@
+package com.visa.training.jdbc;
+
+import java.util.List;
+
+public class ProductDAO {
+	
+	public void save(Product toBeSaved) {
+		//insert
+	}
+	
+	public Product findById(int id)
+	{
+		//Read based on ID
+	}
+	
+	public List<Product> findAll()
+	{
+		//Read all
+	}
+	
+	public void remove(int id)
+	{
+		
+	}
+	
+	public void update(Product updated)
+	{
+		
+	}
+}

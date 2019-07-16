@@ -1,0 +1,41 @@
+package com.visa.training.Java;
+
+public class Buffer {
+	
+	int data;
+	boolean available;//If true, Consumer can go ahead
+	
+	public synchronized void produce(int newData)
+	{	
+		while(available)
+		{
+			try
+			{
+				Thread.sleep(100);
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Producer producing -->" + newData);
+		this.data=newData;
+	}
+	
+	public synchronized int consume() {
+		while(!available)
+		{
+			try
+			{
+				Thread.sleep(100);
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Consumer consuming -->" + Data);
+		return this.data;
+	}
+
+}

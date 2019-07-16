@@ -1,0 +1,10 @@
+package com.visa.training.jdbc;
+
+public class ProductView {
+
+	public static void main(String[] args)throws Exception {
+		ProductDAO pdao = new ProductDAO();
+		System.out.println(pdao.findAll());
+		System.out.println(pdao.findById(2));
+	}
+}

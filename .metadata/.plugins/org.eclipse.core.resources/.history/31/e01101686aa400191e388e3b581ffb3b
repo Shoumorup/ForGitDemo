@@ -1,0 +1,11 @@
+package com.visa.training.lambdas;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Streams {
+	public static void main(String[] args) {
+		List<String> words=Arrays.asList("this","is","a","set","of","eaining","words","to","dort","arrays");
+		words.stream().forEach(s->System.out.println("  "+s));
+	}
+}

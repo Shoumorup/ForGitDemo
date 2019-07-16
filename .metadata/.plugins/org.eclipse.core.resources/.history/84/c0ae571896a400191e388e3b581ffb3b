@@ -1,0 +1,20 @@
+package com.visa.training.Concurrency;
+
+public class PrimeSearchApp {
+	
+	public static void main(String[] args) throws Exception{
+		RunnablePrimerSearch w1= new RunnablePrimerSearch(1, 10000);
+		RunnablePrimerSearch w2= new RunnablePrimerSearch(10000, 25000);
+		
+		Thread t1 = new Thread(w1);
+		Thread t2 = new Thread(w2);
+		t1.start();
+		t2.start();
+		
+		t1.join();
+		t2.join();
+		System.out.println("Primes between 1 and 10000 are: "+w1.count);
+		System.out.println("Primes between 10000 and 25000 are: "+w2.count);
+	}
+
+}

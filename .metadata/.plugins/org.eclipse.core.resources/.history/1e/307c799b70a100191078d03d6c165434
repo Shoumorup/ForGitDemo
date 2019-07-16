@@ -1,0 +1,35 @@
+
+class ChemicalElement {
+	int atomicNumber;
+	String symbolicName,fullName;
+	
+	ChemicalElement(int atomicNumber,String symbolicName,String fullName)
+	{
+		this.atomicNumber=atomicNumber;
+		this.symbolicName=symbolicName;
+		this.fullName=fullName;
+	}
+	
+	public boolean isAlkaliMetal()
+	{
+		
+	}
+	
+	public boolean isTransitionMetal()
+	{
+		
+	}
+	
+	public boolean isMetal()
+	{
+		
+	}	
+}
+
+public class ChemicalElementApp{
+	
+	public static void main(String args[])
+	{
+		
+	}
+}

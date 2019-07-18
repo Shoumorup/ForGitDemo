@@ -38,26 +38,29 @@ public class ShoppingCartServlet extends HttpServlet {
 		else if (uri.endsWith("addbikes"))
 		{
 			String[] selectedBikes = request.getParameterValues("Bike");
-			String[] selectedBooks =(String[]) session.getAttribute("selectedBooks");
-			String[] selectedCars  =(String[]) session.getAttribute("selectedCars");
+			session.setAttribute("selectedBikes", selectedBikes);
+//			String[] selectedBooks =(String[]) session.getAttribute("selectedBooks");
+//			String[] selectedCars  =(String[]) session.getAttribute("selectedCars");
 			
-			PrintWriter out = response.getWriter();
-			out.println("<html><body>");
-			out.println("<h4>Selected Books</h4>");
-			out.println("<ul>");
-			Stream.of(selectedBooks).map(s->"<li>"+s+"</li>").forEach(out::println);
-			out.println("</ul>"); 
-			out.println("<h4>Selected Cars</h4>");
-			out.println("<ul>");
-			Stream.of(selectedCars).map(s->"<li>"+s+"</li>").forEach(out::println);
-			out.println("</ul>");
-			out.println("<h4>Selected Bikes</h4>");
-			out.println("<ul>");
-			Stream.of(selectedBikes).map(s->"<li>"+s+"</li>").forEach(out::println);
-			out.println("</ul>");
-			out.println("</body></html>");
+//			PrintWriter out = response.getWriter();
+//			out.println("<html><body>");
+//			out.println("<h4>Selected Books</h4>");
+//			out.println("<ul>");
+//			Stream.of(selectedBooks).map(s->"<li>"+s+"</li>").forEach(out::println);
+//			out.println("</ul>"); 
+//			out.println("<h4>Selected Cars</h4>");
+//			out.println("<ul>");
+//			Stream.of(selectedCars).map(s->"<li>"+s+"</li>").forEach(out::println);
+//			out.println("</ul>");
+//			out.println("<h4>Selected Bikes</h4>");
+//			out.println("<ul>");
+//			Stream.of(selectedBikes).map(s->"<li>"+s+"</li>").forEach(out::println);
+//			out.println("</ul>");
+//			out.println("</body></html>");
 			
-			session.invalidate();
+			request.getRequestDispatcher("cart_el.jsp").forward(request, response);
+			
+			//session.invalidate();
 		}
 	}
 

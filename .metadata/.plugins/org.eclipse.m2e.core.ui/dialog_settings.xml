@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/root/eclipse-workspace"/>
 			<item value="/root/eclipse-workspace/MyProject/src/com/visa/training/sql"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -49,6 +50,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="springwebapp"/>
 			<item value="JdbcProject"/>
 		</list>
 		<list key="projectNameTemplate">

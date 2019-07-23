@@ -18,11 +18,13 @@ public class HelloWorld extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		out.println("<html>");
-		out.println("<body bgcolor=blue>");
-		out.println("<h3>Hello Servlets, time now is: "+new Date()+"</h3>");
-		out.println("At company: "+getServletContext());
-		out.println("</body> </html>");
+		//out.println("<html>");
+		//out.println("<body bgcolor=blue>");
+		//out.println("<h3>Hello Servlets, time now is: "+new Date()+"</h3>");
+		//out.println("At company: "+getServletContext());
+		System.out.println("Hello");
+		//out.println("<body>");
+		//out.println("</html>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
